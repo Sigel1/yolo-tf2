@@ -61,7 +61,7 @@ class Trainer(BaseModel):
         if not image_folder:
             self.image_folder = get_abs_path('data', 'photos', verify=True)
         assert (
-            len((images := get_image_files(self.image_folder))) > 1
+            len((images = get_image_files(self.image_folder))) > 1
         ), f'Empty image folder: {self.image_folder}'
         self.image_width, self.image_height = imagesize.get(images[0])
         self.classes_file = get_abs_path(classes_file, verify=True)
