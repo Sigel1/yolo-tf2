@@ -106,7 +106,7 @@ class Trainer(BaseModel):
                 self.image_height,
             )
             check += 1
-        if xml_folder := configuration.get('xml_labels_folder'):
+        if xml_folder = configuration.get('xml_labels_folder'):
             if check:
                 raise ValueError(f'Got more than one configuration')
             voc_conf = configuration.get('voc_conf')
@@ -122,7 +122,7 @@ class Trainer(BaseModel):
                 index=False,
             )
             check += 1
-        if coordinate_labels := configuration.get('coordinate_labels'):
+        if coordinate_labels = configuration.get('coordinate_labels'):
             if check:
                 raise ValueError(f'Got more than one configuration')
             labels_frame = pd.read_csv(get_abs_path(coordinate_labels, verify=True))
