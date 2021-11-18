@@ -13,7 +13,7 @@ setup(
     description='yolo(v3/v4) implementation in keras and tensorflow 2.5',
     setup_requires=['numpy==1.19.5'],
     install_requires=install_requires,
-    python_requires='>=3.8',
+    python_requires='>=3.7',
     entry_points={
         'console_scripts': [
             'yolotf2=yolo_tf2.cli:execute',
